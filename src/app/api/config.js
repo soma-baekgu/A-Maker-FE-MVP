@@ -30,7 +30,7 @@ const setAuthInterceptors = (instance) => {
     (config) => {
       config.headers = {
         ...config.headers,
-        Authorization: localStorage.getItem('token')
+        Authorization: `Bearer ${localStorage.getItem('token')}`
       };
       return config;
     },
